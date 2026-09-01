@@ -50,31 +50,7 @@ function showChapter(id){
   $("#detail").scrollIntoView({behavior:"smooth",block:"start"});
 }
 
-const modal=$("#pdfModal");
-const frame=$("#pdfFrame");
-function openPdf(page=null){
-  frame.src = page ? `docs/codigo-penal.pdf#page=${page}` : "docs/codigo-penal.pdf";
-  modal.classList.add("open");
-  modal.setAttribute("aria-hidden","false");
-  document.body.style.overflow="hidden";
-  $("#closePdfBtn").focus();
-}
-function closePdf(){
-  modal.classList.remove("open");
-  modal.setAttribute("aria-hidden","true");
-  frame.src="about:blank";
-  document.body.style.overflow="";
-}
-
-$("#openPdfBtn").onclick=()=>openPdf();
-$("#openPdfBtnBottom").onclick=()=>openPdf();
-$("#detailPdfBtn").onclick=()=>{
-  const c=data.find(x=>x.id===selectedChapter);
-  openPdf(c?.page || null);
-};
-$("#closePdfBtn").onclick=closePdf;
-document.querySelectorAll("[data-close-pdf]").forEach(x=>x.onclick=closePdf);
-document.addEventListener("keydown",e=>{if(e.key==="Escape" && modal.classList.contains("open")) closePdf();});
+$("#openPdfBtn").onclick=()=>window.open("docs/codigo-penal.pdf", "_blank", "noopener");
 
 $("#searchInput").addEventListener("input",e=>{gridRender(e.target.value);navRender(e.target.value)});
 $("#clearSearch").onclick=()=>{$("#searchInput").value="";gridRender();navRender();};

@@ -70,39 +70,14 @@
   <section id="detail" class="content-section detail-section">
     <div class="section-head">
       <div><span class="eyebrow">DETALLE</span><h2 id="detailTitle">Selecciona un capítulo</h2><p id="detailDesc"></p></div>
-      <button id="detailPdfBtn" class="secondary small">Ver PDF de este capítulo ↗</button>
     </div>
     <div id="detailItems" class="offense-grid"></div>
   </section>
 
-  <section class="pdf-callout content-section" aria-label="Documento original">
-    <div class="pdf-callout-inner">
-      <div>
-        <span class="eyebrow">DOCUMENTO ORIGINAL</span>
-        <h2>¿Necesitas comprobar el PDF?</h2>
-        <p>El documento no se muestra automáticamente en la página. Ábrelo cuando quieras desde este botón.</p>
-      </div>
-      <button class="primary" id="openPdfBtnBottom">Abrir documento ↗</button>
-    </div>
-  </section>
 </main>
 </div>
 
 <footer><span>Nova Distrct RP</span><span>Documento original incluido en <code>docs/</code></span></footer>
-
-<div id="pdfModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
-  <div class="modal-backdrop" data-close-pdf></div>
-  <div class="modal-panel">
-    <div class="modal-head">
-      <div><span class="eyebrow">DOCUMENTO</span><h2 id="pdfModalTitle">Código Penal original</h2></div>
-      <div class="modal-actions">
-        <a class="secondary small" href="docs/codigo-penal.pdf" target="_blank" rel="noopener">Nueva pestaña ↗</a>
-        <button id="closePdfBtn" class="icon-btn" title="Cerrar" aria-label="Cerrar">×</button>
-      </div>
-    </div>
-    <iframe id="pdfFrame" title="Código Penal original" src="about:blank"></iframe>
-  </div>
-</div>
 
 <script src="assets/data.js"></script>
 <script src="app.js"></script>

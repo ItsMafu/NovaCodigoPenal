@@ -9,7 +9,7 @@ Página web estática para consultar el Código Penal de Nova Distrct RP.
 - Buscador por capítulos e infracciones.
 - Capítulos y sanciones desplegables.
 - PDF original oculto por defecto.
-- Botones para abrir el PDF en un visor/modal o en una pestaña nueva.
+- Botón principal para abrir el PDF original en una pestaña nueva, sin mostrarlo incrustado en la web.
 - Modo claro/oscuro.
 - Navegación mediante hash (`#capitulo-...`).
 - Sin frameworks ni instalación: HTML, CSS y JavaScript.
