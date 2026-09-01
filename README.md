@@ -1,29 +1,21 @@
-# NOVA DISTRICT · Código Penal
+# Nova Distrct RP — Código Penal
 
-Web estática preparada para GitHub Pages.
-
-## Publicar en GitHub
-1. Crea un repositorio (por ejemplo `nova-district-codigo-penal`).
-2. Sube **todo el contenido de esta carpeta** manteniendo la carpeta `assets/`.
-3. En GitHub: **Settings → Pages → Deploy from a branch → main → / (root)**.
-4. Guarda y espera a que GitHub Pages publique la web.
-
-No necesita Node, servidor ni base de datos. Todo funciona con HTML, CSS y JavaScript.
+Versión web estática del **Código Penal del Servidor**, preparada para publicarse directamente en GitHub Pages.
 
 ## Incluye
-- Buscador instantáneo por artículo, capítulo y texto.
-- Filtros por gravedad/meses.
-- Fichas interactivas con modal.
+- Diseño responsive y limpio.
+- Logo de Nova Distrct RP.
 - Navegación por capítulos.
-- Calculadora visual de nivel de sanción.
-- Command palette con `Ctrl/Cmd + K`.
-- Atajo `/` para buscar y `Esc` para cerrar ventanas.
-- Diseño responsive para móvil.
-- PDF original dentro de `assets/codigo-penal.pdf`.
+- Buscador de delitos/capítulos.
+- Tarjetas desplegables con descripción y sanción.
+- Visor del documento original con paginación, zoom, pantalla completa y controles de teclado.
+- PDF original incluido en `docs/codigo-penal.pdf`.
+- Sin framework ni build: HTML + CSS + JavaScript.
 
+## Publicar en GitHub Pages
+1. Sube todo el contenido de esta carpeta a un repositorio.
+2. En **Settings → Pages**, selecciona **Deploy from a branch**.
+3. Elige la rama principal y la carpeta `/ (root)`.
+4. Guarda y espera a que GitHub Pages genere la web.
 
-### Actualización
-- Se eliminó la calculadora de sanciones.
-- Se eliminó la esfera, ciudad y tarjeta de estado del hero.
-- El hero ahora muestra únicamente el símbolo ⚖ y el logo oficial de Nova District.
-- El logo se incluye en `assets/nova-district-logo.png`.
+> Nota: el PDF original es la referencia visual. La información mostrada en las tarjetas web fue transcrita a partir del documento; donde el PDF no permite leer una sanción con claridad, se deja `—` en lugar de inventarla.
