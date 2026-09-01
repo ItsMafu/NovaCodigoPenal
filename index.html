@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Código Penal del Servidor — Nova District. Normativa oficial de sanciones.">
+<title>Nova District · Código Penal</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+  <a class="brand" href="#inicio" aria-label="Nova District inicio"><span class="brand-mark">N</span><span>NOVA <b>DISTRICT</b></span></a>
+  <nav class="nav"><a href="#codigo">Código</a><a href="#buscador">Buscador</a><a href="#sanciones">Sanciones</a><a href="#documento">Documento</a></nav>
+  <div class="top-actions"><button class="icon-btn" id="themeBtn" title="Cambiar tema">◐</button><button class="kbd" id="cmdBtn">⌘ K</button></div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> DOCUMENTO OFICIAL · NOVA DISTRICT</div>
+    <h1>CÓDIGO<br><em>PENAL</em></h1>
+    <p>Consulta rápida, visual y moderna de la normativa de sanciones del servidor.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#codigo">Explorar código <span>↘</span></a><a class="btn ghost" href="assets/codigo-penal.pdf" target="_blank">Abrir PDF original</a></div>
+    <div class="hero-stats"><div><strong>07</strong><span>CAPÍTULOS</span></div><div><strong id="articleCount">—</strong><span>ARTÍCULOS INDEXADOS</span></div><div><strong id="fineCount">—</strong><span>SANCIONES</span></div></div>
+  </div>
+  <div class="hero-visual"><div class="orb"></div><div class="city"></div><div class="hero-card"><span>STATUS</span><strong>VIGENTE</strong><small>Consulta normativa</small></div><div class="shield">⚖</div></div>
+</section>
+
+<section class="section" id="codigo">
+  <div class="section-head"><div><div class="eyebrow">01 / CÓDIGO</div><h2>Explora la normativa</h2></div><p>Selecciona un capítulo y abre cualquier artículo para consultar su descripción y sanción.</p></div>
+  <div class="chapter-grid" id="chapterGrid"></div>
+</section>
+
+<section class="section search-section" id="buscador">
+  <div class="section-head"><div><div class="eyebrow">02 / BÚSQUEDA</div><h2>Encuentra una infracción</h2></div><p>Busca por nombre, número, capítulo o palabra clave.</p></div>
+  <div class="search-wrap"><span>⌕</span><input id="search" placeholder="Ej. robo, policía, armas, 3.07…" autocomplete="off"><button id="clearSearch">ESC</button></div>
+  <div class="filters"><button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="leve">0–5 meses</button><button class="filter" data-filter="media">6–15 meses</button><button class="filter" data-filter="grave">16+ meses</button></div>
+  <div class="results-meta"><span id="resultCount">0 resultados</span><span>Haz clic para abrir · <kbd>/</kbd> enfoca búsqueda</span></div>
+  <div class="article-list" id="articleList"></div>
+</section>
+
+<section class="section split" id="sanciones">
+  <div><div class="eyebrow">03 / HERRAMIENTAS</div><h2>Calcula una sanción</h2><p class="muted">Introduce una multa y meses para obtener un resumen visual. Esta herramienta es solo de consulta y no sustituye al documento oficial.</p></div>
+  <div class="calculator card"><label>Multa (€)<input id="calcFine" type="number" min="0" value="500"></label><label>Meses<input id="calcMonths" type="number" min="0" value="5"></label><div class="calc-result"><span>NIVEL ESTIMADO</span><strong id="level">LEVE</strong><small id="levelText">Sanción de baja duración.</small></div></div>
+</section>
+
+<section class="section document" id="documento">
+  <div class="document-copy"><div class="eyebrow">04 / ARCHIVO OFICIAL</div><h2>El documento, intacto.</h2><p>El PDF original se incluye dentro del proyecto para que puedas publicarlo junto a la web en GitHub Pages.</p><a class="btn primary" href="assets/codigo-penal.pdf" target="_blank">Ver PDF completo ↗</a></div>
+  <div class="pdf-card"><div class="pdf-top"><span>PDF</span><b>codigo-penal.pdf</b><span>8 páginas</span></div><div class="pdf-preview"><div class="doc-icon">⚖</div><strong>CÓDIGO PENAL</strong><small>DEL SERVIDOR</small><i>NOVA DISTRICT</i></div></div>
+</section>
+</main>
+
+<footer><div><span class="brand-mark">N</span> NOVA DISTRICT</div><span>© 2026 · Código Penal del Servidor</span><a href="#inicio">Volver arriba ↑</a></footer>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="modal-box"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+<div class="command" id="command" aria-hidden="true"><div class="command-box"><div class="command-search">⌘ <input id="cmdInput" placeholder="Escribe un comando…"></div><div id="cmdItems"></div><small>ESC para cerrar · ↑↓ navegar · ENTER seleccionar</small></div></div>
+<script src="app.js"></script>
+</body></html>
