@@ -20,3 +20,10 @@ No necesita Node, servidor ni base de datos. Todo funciona con HTML, CSS y JavaS
 - Atajo `/` para buscar y `Esc` para cerrar ventanas.
 - Diseño responsive para móvil.
 - PDF original dentro de `assets/codigo-penal.pdf`.
+
+
+### Actualización
+- Se eliminó la calculadora de sanciones.
+- Se eliminó la esfera, ciudad y tarjeta de estado del hero.
+- El hero ahora muestra únicamente el símbolo ⚖ y el logo oficial de Nova District.
+- El logo se incluye en `assets/nova-district-logo.png`.

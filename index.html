@@ -10,7 +10,7 @@
 <div class="noise"></div>
 <header class="topbar">
   <a class="brand" href="#inicio" aria-label="Nova District inicio"><span class="brand-mark">N</span><span>NOVA <b>DISTRICT</b></span></a>
-  <nav class="nav"><a href="#codigo">Código</a><a href="#buscador">Buscador</a><a href="#sanciones">Sanciones</a><a href="#documento">Documento</a></nav>
+  <nav class="nav"><a href="#codigo">Código</a><a href="#buscador">Buscador</a><a href="#buscador">Sanciones</a><a href="#documento">Documento</a></nav>
   <div class="top-actions"><button class="icon-btn" id="themeBtn" title="Cambiar tema">◐</button><button class="kbd" id="cmdBtn">⌘ K</button></div>
 </header>
 
@@ -23,7 +23,7 @@
     <div class="hero-buttons"><a class="btn primary" href="#codigo">Explorar código <span>↘</span></a><a class="btn ghost" href="assets/codigo-penal.pdf" target="_blank">Abrir PDF original</a></div>
     <div class="hero-stats"><div><strong>07</strong><span>CAPÍTULOS</span></div><div><strong id="articleCount">—</strong><span>ARTÍCULOS INDEXADOS</span></div><div><strong id="fineCount">—</strong><span>SANCIONES</span></div></div>
   </div>
-  <div class="hero-visual"><div class="orb"></div><div class="city"></div><div class="hero-card"><span>STATUS</span><strong>VIGENTE</strong><small>Consulta normativa</small></div><div class="shield">⚖</div></div>
+  <div class="hero-visual"><div class="legal-symbol" aria-hidden="true">⚖</div><div class="logo-glow"></div><img class="hero-logo" src="assets/nova-district-logo.png" alt="NOVA DISTRICT RP"></div>
 </section>
 
 <section class="section" id="codigo">
@@ -39,13 +39,8 @@
   <div class="article-list" id="articleList"></div>
 </section>
 
-<section class="section split" id="sanciones">
-  <div><div class="eyebrow">03 / HERRAMIENTAS</div><h2>Calcula una sanción</h2><p class="muted">Introduce una multa y meses para obtener un resumen visual. Esta herramienta es solo de consulta y no sustituye al documento oficial.</p></div>
-  <div class="calculator card"><label>Multa (€)<input id="calcFine" type="number" min="0" value="500"></label><label>Meses<input id="calcMonths" type="number" min="0" value="5"></label><div class="calc-result"><span>NIVEL ESTIMADO</span><strong id="level">LEVE</strong><small id="levelText">Sanción de baja duración.</small></div></div>
-</section>
-
 <section class="section document" id="documento">
-  <div class="document-copy"><div class="eyebrow">04 / ARCHIVO OFICIAL</div><h2>El documento, intacto.</h2><p>El PDF original se incluye dentro del proyecto para que puedas publicarlo junto a la web en GitHub Pages.</p><a class="btn primary" href="assets/codigo-penal.pdf" target="_blank">Ver PDF completo ↗</a></div>
+  <div class="document-copy"><div class="eyebrow">03 / ARCHIVO OFICIAL</div><h2>El documento, intacto.</h2><p>El PDF original se incluye dentro del proyecto para que puedas publicarlo junto a la web en GitHub Pages.</p><a class="btn primary" href="assets/codigo-penal.pdf" target="_blank">Ver PDF completo ↗</a></div>
   <div class="pdf-card"><div class="pdf-top"><span>PDF</span><b>codigo-penal.pdf</b><span>8 páginas</span></div><div class="pdf-preview"><div class="doc-icon">⚖</div><strong>CÓDIGO PENAL</strong><small>DEL SERVIDOR</small><i>NOVA DISTRICT</i></div></div>
 </section>
 </main>
