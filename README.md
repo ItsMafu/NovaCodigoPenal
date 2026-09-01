@@ -1,21 +1,26 @@
 # Nova Distrct RP — Código Penal
 
-Versión web estática del **Código Penal del Servidor**, preparada para publicarse directamente en GitHub Pages.
+Página web estática para consultar el Código Penal de Nova Distrct RP.
 
 ## Incluye
-- Diseño responsive y limpio.
-- Logo de Nova Distrct RP.
-- Navegación por capítulos.
-- Buscador de delitos/capítulos.
-- Tarjetas desplegables con descripción y sanción.
-- Visor del documento original con paginación, zoom, pantalla completa y controles de teclado.
-- PDF original incluido en `docs/codigo-penal.pdf`.
-- Sin framework ni build: HTML + CSS + JavaScript.
 
-## Publicar en GitHub Pages
-1. Sube todo el contenido de esta carpeta a un repositorio.
+- Diseño responsive para PC y móvil.
+- Logo oficial integrado con fondo transparente, sin recuadro negro.
+- Buscador por capítulos e infracciones.
+- Capítulos y sanciones desplegables.
+- PDF original oculto por defecto.
+- Botones para abrir el PDF en un visor/modal o en una pestaña nueva.
+- Modo claro/oscuro.
+- Navegación mediante hash (`#capitulo-...`).
+- Sin frameworks ni instalación: HTML, CSS y JavaScript.
+
+## GitHub Pages
+
+1. Sube todo el contenido de esta carpeta al repositorio.
 2. En **Settings → Pages**, selecciona **Deploy from a branch**.
 3. Elige la rama principal y la carpeta `/ (root)`.
-4. Guarda y espera a que GitHub Pages genere la web.
+4. Guarda y espera a que GitHub publique la página.
 
-> Nota: el PDF original es la referencia visual. La información mostrada en las tarjetas web fue transcrita a partir del documento; donde el PDF no permite leer una sanción con claridad, se deja `—` en lugar de inventarla.
+El PDF original está en `docs/codigo-penal.pdf`.
+
+`assets/hero-banner.png` es un banner opcional generado para futuras versiones del encabezado; la página actual utiliza directamente el logo transparente para mantener el diseño limpio.

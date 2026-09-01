@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090b18">
+<meta name="theme-color" content="#070812">
 <meta name="description" content="Código Penal del Servidor — Nova Distrct RP">
 <title>Código Penal — Nova Distrct RP</title>
 <link rel="stylesheet" href="styles.css">
@@ -11,7 +11,7 @@
 <body>
 <header class="topbar">
   <a class="brand" href="#inicio" aria-label="Nova Distrct RP">
-    <img src="assets/logo.png" alt="Nova Distrct RP">
+    <img src="assets/logo-transparent.png" alt="Nova Distrct RP">
     <span><strong>Nova Distrct RP</strong><small>Código Penal del Servidor</small></span>
   </a>
   <div class="top-actions">
@@ -36,22 +36,27 @@
 
 <main id="main">
   <section id="inicio" class="hero">
+    <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
     <div class="hero-copy">
       <span class="eyebrow">NOVA DISTRCT RP</span>
       <h1>Código Penal<br><span>del Servidor</span></h1>
-      <p>Una versión web limpia y rápida para consultar la normativa, navegar por capítulos y localizar sanciones.</p>
+      <p>Consulta la normativa de forma rápida, ordenada y cómoda. Busca por capítulo, revisa cada infracción y abre el documento original solo cuando lo necesites.</p>
       <div class="hero-actions">
         <button class="primary" id="startBtn">Empezar a consultar →</button>
-        <a class="secondary" href="docs/codigo-penal.pdf" target="_blank" rel="noopener">Abrir PDF original ↗</a>
+        <button class="secondary" id="openPdfBtn">Ver PDF original ↗</button>
       </div>
+      <div class="hero-note"><span class="dot"></span> Documento original disponible bajo demanda</div>
     </div>
-    <div class="hero-logo"><img src="assets/logo.png" alt="Logo Nova Distrct RP"></div>
+    <div class="hero-logo-wrap">
+      <div class="logo-orbit"></div>
+      <img class="hero-logo" src="assets/logo-transparent.png" alt="Logo Nova Distrct RP">
+    </div>
   </section>
 
   <section class="stats" aria-label="Resumen">
     <div><strong>7</strong><span>Capítulos</span></div>
     <div><strong id="offenseCount">0</strong><span>Infracciones</span></div>
-    <div><strong>8</strong><span>Páginas</span></div>
+    <div><strong>8</strong><span>Páginas originales</span></div>
   </section>
 
   <section id="chapters" class="content-section">
@@ -65,31 +70,40 @@
   <section id="detail" class="content-section detail-section">
     <div class="section-head">
       <div><span class="eyebrow">DETALLE</span><h2 id="detailTitle">Selecciona un capítulo</h2><p id="detailDesc"></p></div>
-      <a id="pdfPageLink" class="secondary small" href="docs/codigo-penal.pdf#page=2" target="_blank" rel="noopener">Ver PDF ↗</a>
+      <button id="detailPdfBtn" class="secondary small">Ver PDF de este capítulo ↗</button>
     </div>
     <div id="detailItems" class="offense-grid"></div>
   </section>
 
-  <section class="viewer content-section">
-    <div class="section-head">
-      <div><span class="eyebrow">DOCUMENTO</span><h2>Vista del PDF</h2><p>La versión original se conserva para comprobar el contenido visual.</p></div>
-      <div class="viewer-controls">
-        <button id="prevPage" class="icon-btn">←</button>
-        <span id="pageLabel">Página 1 / 8</span>
-        <button id="nextPage" class="icon-btn">→</button>
-        <button id="zoomOut" class="icon-btn">−</button>
-        <button id="zoomIn" class="icon-btn">+</button>
-        <button id="fullscreen" class="icon-btn">⛶</button>
+  <section class="pdf-callout content-section" aria-label="Documento original">
+    <div class="pdf-callout-inner">
+      <div>
+        <span class="eyebrow">DOCUMENTO ORIGINAL</span>
+        <h2>¿Necesitas comprobar el PDF?</h2>
+        <p>El documento no se muestra automáticamente en la página. Ábrelo cuando quieras desde este botón.</p>
       </div>
-    </div>
-    <div id="viewerFrame" class="viewer-frame">
-      <img id="pdfPageImg" src="assets/pages/page-1.webp" alt="Página 1 del Código Penal">
+      <button class="primary" id="openPdfBtnBottom">Abrir documento ↗</button>
     </div>
   </section>
 </main>
 </div>
 
 <footer><span>Nova Distrct RP</span><span>Documento original incluido en <code>docs/</code></span></footer>
+
+<div id="pdfModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+  <div class="modal-backdrop" data-close-pdf></div>
+  <div class="modal-panel">
+    <div class="modal-head">
+      <div><span class="eyebrow">DOCUMENTO</span><h2 id="pdfModalTitle">Código Penal original</h2></div>
+      <div class="modal-actions">
+        <a class="secondary small" href="docs/codigo-penal.pdf" target="_blank" rel="noopener">Nueva pestaña ↗</a>
+        <button id="closePdfBtn" class="icon-btn" title="Cerrar" aria-label="Cerrar">×</button>
+      </div>
+    </div>
+    <iframe id="pdfFrame" title="Código Penal original" src="about:blank"></iframe>
+  </div>
+</div>
+
 <script src="assets/data.js"></script>
 <script src="app.js"></script>
 </body>
